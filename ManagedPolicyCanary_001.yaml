@@ -1,0 +1,17 @@
+Description: "MP resource canary"
+Resources:
+  CanaryManagedPolicy:
+      Type: AWS::IAM::ManagedPolicy
+      Properties:
+        ManagedPolicyName: "MyMPCanaryTest"
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            -
+              Sid: AllowAllUsersToListAccounts
+              Effect: Allow
+              Action:
+                - iam:ListAccountAliases
+                - iam:ListUsers
+                - iam:GetAccountSummary
+              Resource: "*"
