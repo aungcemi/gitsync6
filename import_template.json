@@ -1,25 +1,3 @@
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Testing managed policies",
-  "Resources": {
-    "M8": {
-      "Type": "AWS::IAM::ManagedPolicy",
-      "Properties": {
-        "Description": "Simple managed policy for import",
-        "ManagedPolicyName": "SamplePolicyForImport",
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "cloudformation:Describe*"
-              ],
-              "Resource": "*"
-            }
-          ]
-        }
-      }
-    }
-  }
-}
+template-file-path: import_template.json
+parameters: {}
+tags: {}
